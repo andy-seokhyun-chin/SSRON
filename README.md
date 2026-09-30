@@ -1,7 +1,7 @@
 # Spectral Super-Resolution using Spatial-Spectral Residual Operator Networks (IGARSS 2026)
-## 1. Introduction
+## Introduction
 This is the research code of the IEEE International Geoscience and Remote Sensing Symposium 2026 paper (to appear in proceedings).
-[S.Chin, "Spectral Super-Resolution using Spatial-Spectral Residual Operator Networks," IEEE International Geoscience and Remote Sensing Symposium 2026]{https://arxiv.org/abs/2609.35410v1}
+[S. Chin, "Spectral Super-Resolution using Spatial-Spectral Residual Operator Networks," IEEE International Geoscience and Remote Sensing Symposium 2026](https://arxiv.org/abs/2609.35410v1)
 
 This repository contains the preprocessing pipeline, dataset builder, model training scripts, and inference code. The intended execution order is:
 
@@ -9,7 +9,15 @@ This repository contains the preprocessing pipeline, dataset builder, model trai
 2. Convert the HDF5 dataset into the .npz + split/index files that the PyTorch loaders expect
 3. Train the model
 4. Run inference with a saved checkpoint
-
+## Requirements:
+torch>=2.0
+neuraloperator>=1.0
+einops
+numpy
+tqdm
+h5py
+netCDF4
+*Note: the original environment was not preserved; these versions are verified to import and run a forward pass, but the full training pipeline has not been re-run with them.*
 ## Recommended end-to-end order
 
 For the standard SSRON workflow, use this order:
@@ -23,7 +31,6 @@ python inference.py --method ssron --pretrained_model_path "path/to/checkpoint.p
 
 This is the intended sequence for this repository.
 
----
 
 ## Notes
 
