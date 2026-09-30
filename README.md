@@ -10,13 +10,13 @@ This repository contains the preprocessing pipeline, dataset builder, model trai
 3. Train the model
 4. Run inference with a saved checkpoint
 ## Requirements:
-torch>=2.0
-neuraloperator>=1.0
-einops
-numpy
-tqdm
-h5py
-netCDF4
+torch>=2.0 \
+neuraloperator>=1.0 \
+einops \
+numpy \
+tqdm \
+h5py \
+netCDF4 \
 *Note: the original environment was not preserved; these versions are verified to import and run a forward pass, but the full training pipeline has not been re-run with them.*
 ## Recommended end-to-end order
 
